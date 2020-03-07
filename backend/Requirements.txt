@@ -1,0 +1,7 @@
+#python requirements.txt
+ibm_db==3.0.1
+pandas==0.22.0
+ConfigParser==4.0.2
+requests==2.22.0
+flask==1.1.1
+flask_cors==3.0.8
