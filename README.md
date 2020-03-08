@@ -56,7 +56,7 @@ In the next scenario we have just one git branch and one Kubernetes cluster, but
 We will build a simple web application composed by two different components (frontend and backend) and will deploy the application to IBM Cloud Kubernetes Service using the *kubedev* standard.
 
 ## Technology stack
-![technology stack](img/technologiesStack.png)
+![technology stack](doc/kubedev_stack.png)
 
 ## Architectural Diagram
 The main system components are: 
