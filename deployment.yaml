@@ -45,7 +45,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: de.icr.io/cloud4banking/frontend:BUILD_NUMBER
+        image: de.icr.io/kubedev/frontend:BUILD_NUMBER
         imagePullPolicy: Always    
         ports:
         - containerPort: 3000

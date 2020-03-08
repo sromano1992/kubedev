@@ -32,6 +32,8 @@ To define your *deployment.yaml* you need to have a knowledge of Kubernetes obje
 
 Note that, in the *deployment.yaml*, you must tag each of your docker image with *:BUILD_NUMBER*: the toolchain script will update this tag with an incremental value and will version each of your docker image with this value to the docker registry. More details below.
 
+![GitHub repository organization](doc/buildnumber.png)
+
 ## Continuous delivery pipeline
 
 ![Kubernetes continuous delivery](doc/kubedev_continuousDelivery.png)
