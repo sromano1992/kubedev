@@ -1,6 +1,6 @@
 # kubedev: a continuous delivery Standard for your K8s workloads on IBM Cloud
 
-*kubedev* is a standard that allows you to easily deploy your applications to Kubernetes with a continuous delivery approach. The benefits you have using this approach are listed below:
+*kubedev* is a standard that allows you to easily deploy your applications to Kubernetes on IBM Cloud with a continuous delivery approach. The benefits you have using this approach are listed below:
 
 1) **automatic versioning of each components of your application**: for example, if you are designing and devolping a microservices application for Kubernetes, you can use this approach to simply deploy and versioning each component of your application without the need to be a devops specialist
 
@@ -17,8 +17,8 @@ The used components are:
 ## How is the lecture organized
 This lecture is organized as follow:
 
-1) kubedev concepts: the first section gives you the theory basis you need to understand how the *kubedev* standard works and how to build your custom Kubernetes application using this standard
-2) Build your *kubedev* microservices application: here a simple scenario of *kubedeb* application is shown; you can follow the steps in this section to build your first *kubedev* application
+1) **kubedev concepts**: the first section gives you the theory basis you need to understand how the *kubedev* standard works and how to build your custom Kubernetes application using this standard
+2) **Build your first *kubedev* microservices application**: here a simple scenario of *kubedeb* application is shown; you can follow the steps in this section to build your first *kubedev* application
 
 # kubedev concepts
 
