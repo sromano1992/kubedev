@@ -14,9 +14,21 @@ The used components are:
 
 3) Toolchain: Toolchains service allows you to deploy a new version of your microservices application to Kubernetes 
 
+## How is the lecture organized
+This lecture is organized as follow:
+
+1) kubedev concepts: the first section gives you the theory basis you need to understand how the *kubedev* standard works and how to build your custom Kubernetes application using this standard
+2) Build your *kubedev* microservices application: here a simple scenario of *kubedeb* application is shown; you can follow the steps in this section to build your first *kubedev* application
+
+# kubedev concepts
+
+## Repository organization
+
 ![GitHub repository organization](doc/kubedev_versioning.png)
 
 In a microservices application you will have many applications to version and to deploy on your runtime (ex. Kubernetes cluster). For related microservices, you can organize the repository as shown in the previous figure: each microservice is an application to dockerize; you can create a folder for each docker in your solution and you a global deployment.yaml file that describe your dockers interaction and allows you to deploy the solution to Kubernetes. 
+
+## Continuous delivery pipeline
 
 ![Kubernetes continuous delivery](doc/kubedev_continuousDelivery.png)
 
@@ -27,6 +39,7 @@ A toolchain, in this scenario, has two different stage: build and deploy. The bu
 In our scenario we have just one git branch and one Kubernetes cluster, but the concepts are the same. 
 
 
+# Build your *kubedev* microservices application
 
 ## System description
 We will build a simple web payment system with two kind of users: 
