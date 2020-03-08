@@ -39,7 +39,7 @@ A toolchain, in this scenario, has two different stage: build and deploy. The bu
 In our scenario we have just one git branch and one Kubernetes cluster, but the concepts are the same. 
 
 
-# Build your *kubedev* microservices application
+# Build your first *kubedev* microservices application
 
 ## System description
 We will build a simple web payment system with two kind of users: 
