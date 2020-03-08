@@ -70,6 +70,10 @@ The main system components are:
    
 ![architectural diagram](doc/kubedev_architecturalDiagram.png)
 
+The image below shows the frontend of the application we will build:
+
+![architectural diagram](doc/kubedev_screen.png)
+
 # Getting started
 
 This step-by-step guide will allows you to create a multi-cloud online payment system. The cloud providers we will use are IBM Cloud and AWS. So, you must create an account for each cloud provider.
