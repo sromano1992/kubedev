@@ -2,9 +2,9 @@
 
 *kubedev* is a standard that allows you to easily deploy your applications to Kubernetes with a continuous delivery approach. The benefits you have using this approach are listed below:
 
-1) automatic versioning of each components of your application: for example, if you are designing and devolping a microservices application for Kubernetes, you can use this approach to simply deploy and versioning each component of your application without the need to be a devops specialist
+1) **automatic versioning of each components of your application**: for example, if you are designing and devolping a microservices application for Kubernetes, you can use this approach to simply deploy and versioning each component of your application without the need to be a devops specialist
 
-2) the developers don't need to became a Kubernetes specialist to deploy the applications to Kubernetes: your developers team must just write code and click a button to do versioning, deploy, add a new microservice
+2) **the developers team does not need to be a Kubernetes specialist to deploy the applications to Kubernetes**: your developers team must just write code and click a button to do versioning, deploy, add a new microservice
 
 The used components are: 
 
