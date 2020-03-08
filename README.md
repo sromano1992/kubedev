@@ -36,27 +36,24 @@ Note that, in the *deployment.yaml*, you must tag each of your docker image with
 
 The *toolchain* folder contains the script you will copy and paste in your toolchain (see next steps for more details). Finally, the *rollback* folder will automatically be populated with a new *deployment.yaml* file after each deploy you will do; you can revert your applications to a previous version by applying (*kubectl apply -f ...*) to your cluster a specific version of your application.
 
+![GitHub repository organization](doc/deployment.png)
+
 ## Continuous delivery pipeline
 
 ![Kubernetes continuous delivery](doc/kubedev_continuousDelivery.png)
 
 The previous image describes the continuous delivery pipeline from the repository and runtime point of view. The image describes a real scenario where there are two different Kubernetes cluster, one for dev/test environment and another one for production environment. The GitHub repository contain three branches, one for each environment. Three different toolchain pipelines get in input a different branch and deploy the application to different Kubernetes cluster. 
 
-A toolchain, in this scenario, has two different stage: build and deploy. The build stage is responsible for: build each application docker to IBM Cloud Container Registry; generate and push a new deployment file with the new built docker images; create a new git tag to have a "label" for this specific deploy (useful for rollback scenario). The deploy stage get in input the “deployment.yaml” file and publish it to Kubernetes runtime; here the new version of your application is deployed. 
+A toolchain, in this scenario, has two different stage: build and deploy. The build stage is responsible for: build each application docker to IBM Cloud Container Registry; generate and push a new deployment file with the new built docker images; create a new git tag to have a *label* for this specific deploy (useful for rollback scenario). The deploy stage get in input the *deployment.yaml* file and publish it to Kubernetes runtime; here the new version of your application is deployed. 
 
-In our scenario we have just one git branch and one Kubernetes cluster, but the concepts are the same. 
+In the next scenario we have just one git branch and one Kubernetes cluster, but the concepts are the same. 
 
 
 # Build your first *kubedev* microservices application
 
 ## System description
-We will build a simple web payment system with two kind of users: 
 
-    External user: user with a bank account that will use our system to make an online payment 
-
-    Internal user: bank employee that will analyze the customers online payments 
-
-The backend of the application will interact with the Db2 on cloud to track the payment records (write operations) and to extract the payment records (read operations). The backend will be hosted on IBM Cloud Kubernetes service; we will build two frontends application: one hosted on IBM Cloud Kubernetes service and the other one hosted on AWS cloud.  
+We will build a simple web application composed by two different components (frontend and backend) and will deploy the application to IBM Cloud Kubernetes Service using the *kubedev* standard.
 
 ## Technology stack
 ![technology stack](img/technologiesStack.png)
