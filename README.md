@@ -1,4 +1,30 @@
-# kubedev
+# kubedev: a continuous delivery Standard for your K8s workloads on IBM Cloud
+
+*kubedev* is a standard that allows you to easily deploy your applications to Kubernetes with a continuous delivery approach. The benefits you have using this approach are listed below:
+
+1) automatic versioning of each components of your application: for example, if you are designing and devolping a microservices application for Kubernetes, you can use this approach to simply deploy and versioning each component of your application without the need to be a devops specialist
+
+2) the developers don't need to became a Kubernetes specialist to deploy the applications to Kubernetes: your developers team must just write code and click a button to do versioning, deploy, add a new microservice
+
+The used components are: 
+
+1) GitHub: the code and artifacts are pushed to GitHub 
+
+2) IBM Container Registry: the built docker images are pushed to IBM Cloud Container Registry 
+
+3) Toolchain: Toolchains service allows you to deploy a new version of your microservices application to Kubernetes 
+
+![GitHub repository organization](doc/kubedev_versioning.png)
+
+In a microservices application you will have many applications to version and to deploy on your runtime (ex. Kubernetes cluster). For related microservices, you can organize the repository as shown in the previous figure: each microservice is an application to dockerize; you can create a folder for each docker in your solution and you a global deployment.yaml file that describe your dockers interaction and allows you to deploy the solution to Kubernetes. 
+
+![Kubernetes continuous delivery](doc/kubedev_continuousDelivery.png)
+
+The previous image describes the continuous delivery pipeline from the repository and runtime point of view. The image describes a real scenario where there are two different Kubernetes cluster, one for dev/test environment and another one for production environment. The GitHub repository contain three branches, one for each environment. Three different toolchain pipelines get in input a different branch and deploy the application to different Kubernetes cluster. 
+
+A toolchain, in this scenario, has two different stage: build and deploy. The build stage is responsible for: build each application docker to IBM Cloud Container Registry; generate and push a new deployment file with the new built docker images; create a new git tag to have a "label" for this specific deploy (useful for rollback scenario). The deploy stage get in input the “deployment.yaml” file and publish it to Kubernetes runtime; here the new version of your application is deployed. 
+
+In our scenario we have just one git branch and one Kubernetes cluster, but the concepts are the same. 
 
 
 
@@ -25,28 +51,6 @@ The main system components are:
 
    
 ![architectural diagram](doc/kubedev_architecturalDiagram.png)
-
-## kubedev: a continuous delivery Standard for your K8s workloads on IBM Cloud
-
-The IBM Continuous Delivery Services allows you to continuously improve your application with new features. Here a best practice of “Continuous Delivery on K8s” is described; the used components are: 
-
-    GitHub: the code and artifacts are pushed to GitHub 
-
-    IBM Container Registry: the built docker images are pushed to IBM Cloud Container Registry 
-
-    Toolchain: Toolchains service allows you to deploy a new version of your microservices application to Kubernetes 
-
-![GitHub repository organization](img/versioning.png)
-
-In a microservices application you will have many applications to version and to deploy on your runtime (ex. Kubernetes cluster). For related microservices, you can organize the repository as shown in the previous figure: each microservice is an application to dockerize; you can create a folder for each docker in your solution and you a global deployment.yaml1 file that describe your dockers interaction and allows you to deploy the solution to Kubernetes. 
-
-![Kubernetes continuous delivery](img/continuousDelivery.png)
-
-The previous image describes the continuous delivery pipeline from the repository and runtime point of view. The image describes a real scenario where there are two different Kubernetes cluster, one for dev/test environment and another one for production environment. The GitHub repository contain three branches, one for each environment. Three different toolchain pipelines get in input a different branch and deploy the application to different Kubernetes cluster. 
-
-A toolchain, in this scenario, has two different stage: build and deploy. The build stage is responsible for: build each application docker to IBM Cloud Container Registry; generate and push a new deployment file with the new built docker images; create a new git tag to have a "label" for this specific deploy (useful for rollback scenario). The deploy stage get in input the “deployment.yaml” file and publish it to Kubernetes runtime; here the new version of your application is deployed. 
-
-In our scenario we have just one git branch and one Kubernetes cluster, but the concepts are the same. 
 
 # Getting started
 
