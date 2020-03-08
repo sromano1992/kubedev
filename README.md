@@ -24,9 +24,9 @@ This lecture is organized as follow:
 
 ## Repository organization
 
-![GitHub repository organization](doc/kubedev_versioning.png)
-
 In a microservices application you will have many applications to version and to deploy on your runtime (ex. Kubernetes cluster). For related microservices, you can organize the repository as shown in the previous figure: each microservice is an application to dockerize; you can create a folder for each docker in your solution and you a global deployment.yaml file that describe your dockers interaction and allows you to deploy the solution to Kubernetes. 
+
+![GitHub repository organization](doc/kubedev_versioning.png)
 
 ## Continuous delivery pipeline
 
