@@ -24,9 +24,13 @@ This lecture is organized as follow:
 
 ## Repository organization
 
-In a microservices application you will have many applications to version and to deploy on your runtime (ex. Kubernetes cluster). For related microservices, you can organize the repository as shown in the previous figure: each microservice is an application to dockerize; you can create a folder for each docker in your solution and you a global deployment.yaml file that describe your dockers interaction and allows you to deploy the solution to Kubernetes. 
+In a microservices application you will have many applications to version and to deploy on your runtime (ex. Kubernetes cluster). For related microservices, the *kubedev* standard organizes the repository as shown in the following figure: each microservice is an application to dockerize; you must create a folder for each docker in your solution and a global *deployment.yaml* file that describe your dockers interaction and allows you to deploy the solution to Kubernetes. 
 
 ![GitHub repository organization](doc/kubedev_versioning.png)
+
+To define your *deployment.yaml* you need to have a knowledge of Kubernetes objects (Pod, Deployment, ReplicaSet, Service, etc.). You can use the *[kubernetes](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)* official documentation to better understand these concepts.
+
+Note that, in the *deployment.yaml*, you must tag each of your docker image with *:BUILD_NUMBER*: the toolchain script will update this tag with an incremental value and will version each of your docker image with this value to the docker registry. More details below.
 
 ## Continuous delivery pipeline
 
