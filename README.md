@@ -173,16 +173,16 @@ The deploy result will be:
 <li> Upload of 2 docker images on your IBM Cloud Container Registry
 You can see the result of this operation by navigating to <i>Kubernetes/Registry</i> section in your IBM Cloud account dashboard
 
-![integration Tools](img/registry.png)
+![integration Tools](doc/kubedev_registry.png)
 <li> Deploy of the applications to Kubernetes cluster
 </ol>
 
 Open the Kubernetes dashboard to see the up and running applications.
-![integration Tools](img/k8s.png)
+![integration Tools](doc/kubedev_k8s.png)
 
 You will have 2 Kubernetes services, one for the frontend component and the other one for the backend component.
 
-![integration Tools](img/services.png)
+![integration Tools](doc/kubedev_services.png)
 
 You can access the frontend component with this url:
 

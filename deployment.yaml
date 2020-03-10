@@ -22,7 +22,7 @@ spec:
         image: uk.icr.io/kubedev/backend:BUILD_NUMBER
         imagePullPolicy: Always    
         ports:
-        - containerPort: 5003
+        - containerPort: 5000
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -61,8 +61,8 @@ spec:
   ports:
     - protocol: TCP
       nodePort: 30036
-      port: 5003
-      targetPort: 5003
+      port: 5000
+      targetPort: 5000
 ---
 apiVersion: v1
 kind: Service
