@@ -44,16 +44,18 @@ The *toolchain* folder contains the script that will do the continuous delivery 
 
 ![Kubernetes continuous delivery](doc/kubedev_continuousDelivery.png)
 
-The previous image describes the continuous delivery pipeline from the repository and runtime point of view. The image describes a real scenario where there are two different Kubernetes cluster, one for dev/test environment and another one for production environment. The GitHub repository contain three branches, one for each environment. Three different toolchain pipelines get in input a different branch and deploy the application to different Kubernetes cluster. 
+The previous image <i>kubedev </i> continuous delivery pipeline from the repository and runtime point of view. The image describes a real scenario where there are two different Kubernetes cluster, one for dev/test environment and another one for production environment. The GitHub repository contain three branches, one for each environment. Three different toolchain pipelines get in input a different branch and deploy the application to different Kubernetes cluster. 
 
-A toolchain, in this scenario, has two different stage: build and deploy. The build stage is responsible for: 
+The <i>kubedev</i> toolchain, in this scenario, has two different stage: build and deploy. <br>
+<ol>
+<li>The <b>build<b> stage is responsible for: 
 <ol>
 <li> build each application docker to IBM Cloud Container Registry
 <li> generate and push a new deployment file with the new built docker images
 <li> create a new git tag to have a *label* for this specific deploy (useful for rollback scenario). 
 </ol>
-
-The deploy stage get in input the *deployment.yaml* file and publish it to Kubernetes runtime; here the new version of your application is deployed. 
+</li>The <b>deploy</b> stage get in input the *deployment.yaml* file and publish it to Kubernetes runtime; here the new version of your application is deployed. 
+</ol>
 
 In the next scenario we have just one git branch and one Kubernetes cluster, but the concepts are the same. 
 
