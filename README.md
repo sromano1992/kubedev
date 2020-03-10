@@ -12,7 +12,7 @@ The *kubedev* concepts are valid everywhere you have a K8s cluster: both Cloud p
 This lecture is organized as follow:
 
 1) **kubedev concepts**: the first section gives you the theory basis you need to understand how the *kubedev* standard works and how to build your custom Kubernetes application using this standard
-2) **Build your first *kubedev* microservices application**: here a simple scenario of *kubedeb* application is shown; you can follow the steps in this section to build your first *kubedev* application
+2) **Build your first *kubedev* microservices application**: here a simple scenario of *kubedev* application on IBM Cloud is shown; you can follow the steps in this section to build your first *kubedev* application
 
 The used components for the point 2 are: 
 
