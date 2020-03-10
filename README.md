@@ -152,13 +152,19 @@ sh toolchain/build.sh
 <li> Set <i>Kubernetes</i> as <i>Deployer Type</i>
 <li> Add the API Key as in the previous step
 <li> Check that you see your cluster in the <i>Cluster name</i>
-<li> In the <i>Deploy script</i>, paste the content of the <i>src/toolchain/deploy.txt</i> script
+<li> In the <i>Deploy script</i>, paste the following content:
+
+```
+#!/bin/bash
+sh toolchain/deploy.sh
+```
+
 <li> Click <i>Save</i>
 </ol>
 
 ### Step 5 - Deploy
 The following picture shows the configured delivery pipeline:
-![integration Tools](img/deliveryPipeline.png)
+![integration Tools](doc/kubedev_deliveryPipeline.png)
 
 Click the <i>Play</i> button on the Build phase to deploy the application.
 <br>
