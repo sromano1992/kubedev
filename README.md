@@ -1,6 +1,6 @@
-# kubedev: a continuous delivery Standard for your K8s workloads on IBM Cloud
+# kubedev: a continuous delivery Standard for your K8s workloads
 
-*kubedev* is a standard that allows you to easily deploy your applications to Kubernetes on IBM Cloud with a continuous delivery approach. The benefits you have using this approach are listed below:
+*kubedev* is a standard that allows you to easily deploy your applications to Kubernetes with a continuous delivery approach. The benefits you have using this approach are listed below:
 
 1) **automatic versioning of each components of your application**: for example, if you are designing and devolping a microservices application for Kubernetes, you can use this approach to simply deploy and versioning each component of your application without the need to be a devops specialist
 
@@ -13,6 +13,8 @@ The used components are:
 2) IBM Container Registry: the built docker images are pushed to IBM Cloud Container Registry 
 
 3) Toolchain: Toolchains service allows you to deploy a new version of your microservices application to Kubernetes 
+
+<b>N.B.: the <i>kubedev</i> concepts can be extended to also other Cloud providers or to your on-premises Kubernetes infrastructure.</b>
 
 ## How is the lecture organized
 This lecture is organized as follow:
@@ -44,7 +46,14 @@ The *toolchain* folder contains the script that will do the continuous delivery 
 
 The previous image describes the continuous delivery pipeline from the repository and runtime point of view. The image describes a real scenario where there are two different Kubernetes cluster, one for dev/test environment and another one for production environment. The GitHub repository contain three branches, one for each environment. Three different toolchain pipelines get in input a different branch and deploy the application to different Kubernetes cluster. 
 
-A toolchain, in this scenario, has two different stage: build and deploy. The build stage is responsible for: build each application docker to IBM Cloud Container Registry; generate and push a new deployment file with the new built docker images; create a new git tag to have a *label* for this specific deploy (useful for rollback scenario). The deploy stage get in input the *deployment.yaml* file and publish it to Kubernetes runtime; here the new version of your application is deployed. 
+A toolchain, in this scenario, has two different stage: build and deploy. The build stage is responsible for: 
+<ol>
+<li> build each application docker to IBM Cloud Container Registry
+<li> generate and push a new deployment file with the new built docker images
+<li> create a new git tag to have a *label* for this specific deploy (useful for rollback scenario). 
+</ol>
+
+The deploy stage get in input the *deployment.yaml* file and publish it to Kubernetes runtime; here the new version of your application is deployed. 
 
 In the next scenario we have just one git branch and one Kubernetes cluster, but the concepts are the same. 
 
@@ -74,7 +83,7 @@ The image below shows the frontend of the application we will build:
 
 ![architectural diagram](doc/kubedev_screen.png)
 
-# Getting started
+## Getting started
 
 This step-by-step guide will allows you to create a simple web application applying the *kubedeb* standard.
 
@@ -200,5 +209,5 @@ To try the application:
 <li> You will see the <i>Welcome to kubedev!</i> message: your frontend and backend applications are able to interact
 </ol>
 
-### End
+## End
 Congratulations! Now you are a ready to design your applications with the <i>kubedev</i> approach.
