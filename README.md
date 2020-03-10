@@ -34,7 +34,7 @@ Note that, in the *deployment.yaml*, you must tag each of your docker image with
 
 ![GitHub repository organization](doc/buildnumber.png)
 
-The *toolchain* folder contains the script you will copy and paste in your toolchain (see next steps for more details). Finally, the *rollback* folder will automatically be populated with a new *deployment.yaml* file after each deploy you will do; you can revert your applications to a previous version by applying (*kubectl apply -f ...*) to your cluster a specific version of your application.
+The *toolchain* folder contains the script that will do the continuous delivery tasks for you (see next sections for more details). Finally, the *rollback* folder will automatically be populated with a new *deployment.yaml* file after each deploy you will do; you can revert your applications to a previous version by applying (*kubectl apply -f ...*) to your cluster a specific version of your application.
 
 ![GitHub repository organization](doc/deployment.png)
 
@@ -190,62 +190,15 @@ http://[YOUR_WORKERNODE_PUBLIC_IP]:30037/
 
 The home page you will see is the following:
 
-![integration Tools](img/frontend_external.png)
+![integration Tools](doc/kubedev_frontend.png)
 
-You can change the <i>amount</i> value and click <i>Pay</i> to simulate a payment. The frontend application will interact with the backend to submit a transaction to the Db2 service.
-
-<br>
-After you complete a transaction, you can see the new row in the Db2 by using your favourite jdbc client and running the following query:
-
-```sql
-SELECT * FROM DNQ01238.PAYMENT;
-``` 
-
-### Step 6 - External User AWS frontend
-The last step shows the simplicity to integrate your cloud application with external systems; in this case, we will integrate our backend system with a frontend application running on AWS.
-<br>
-
-#### Create an AWS Account
-Follow the guide at <a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/">this</a> link to create an AWS Account
-
-#### Create an EC2 instance
-<ol>
-<li> Access to your AWS account
-<li> From the <i>Service</i> menu, click <i>EC2</i>
-<li> Click <i>Launch Instance</i>
-<li> Select the <i>Amazon Linux AMI 2018.03.0 (HVM), SSD Volume Type</i> (free tier eligible)
-<li> Click <i>Review and launch</i>
-<li> Generate and store a new Key Pair
-<li> Click <i>Launch Instances</i>
-<li> Use the guid at <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html">this</a> link to access the EC2 instance via ssh
-<li> Switch to sudo user (<i>sudo su</i>)
-<li> Copy the <i>src/ec2/setup.sh</i> script to the EC2 machine
-<li> Run <i>sh setup.sh</i>
-<li> clone this repository to your EC2
-<li> Move to the <i>frontend_internal</i> folder (<i>cd src/frontend_internal</i>)
-<li> Run <i>npm install</i> 
-<li> Run <i>nohup npm start &</i> to start the application on EC2
-<li> From the EC2 dashboard on AWS, click <i>Security Groups</i>
-<li> Add a Custom inbound rule in the default security group to allow the inbound to the port 3000
-<li> If not present, add the SSH inbound rule
-
-![security groups](img/securityGroup.png)
-<li> Open your browser and follow the <i>http://[EC2 Public DNS]:3000</i> to navigate to the <i>frontend_internal</i> application
-</ol>
-
-You will see the following page:
-
-![frontend internal](img/frontend_internal.png)
-
-### Step 7 - enjoy!
+### Step 6 - enjoy!
 To try the application:
 <ol>
-<li> Open the <i>frontend external</i> application
-<li> Submit a payment
-<li> Open the <i>frontend internal</i> application
-<li> Refresh by using the <i>Click to reload</i> button
-<li> You will see the new payment
+<li> Open the <i>frontend</i> application
+<li> click on the <i>Call backend</i> button
+<li> You will see the <i>Welcome to kubedev!</i> message: your frontend and backend applications are able to interact
 </ol>
 
 ### End
-Congratulations! Now you are a ready to design your applications with a <i>multi-cloud-native</i> approach.
+Congratulations! Now you are a ready to design your applications with the <i>kubedev</i> approach.

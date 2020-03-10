@@ -24,7 +24,8 @@ class App extends React.Component {
     console.log("here!")
     $.ajax({
       type: 'GET',
-      url: 'http://localhost:5000/data/message',
+      //url: 'http://localhost:5000/data/message',
+      url: 'http://50.23.5.152:30036/data/message',
       success: function(data) { 
         console.log('backend response received!' + data['result']['message']); 
         $('#message').append(data['result']['message']);
