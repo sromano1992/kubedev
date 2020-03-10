@@ -48,7 +48,7 @@ The previous image <i>kubedev </i> continuous delivery pipeline from the reposit
 
 The <i>kubedev</i> toolchain, in this scenario, has two different stage: build and deploy. <br>
 <ol>
-<li>The <b>build<b> stage is responsible for: 
+<li>The <b>build</b> stage is responsible for: 
 <ol>
 <li> build each application docker to IBM Cloud Container Registry
 <li> generate and push a new deployment file with the new built docker images
