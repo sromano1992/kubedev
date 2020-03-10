@@ -76,9 +76,9 @@ The image below shows the frontend of the application we will build:
 
 # Getting started
 
-This step-by-step guide will allows you to create a multi-cloud online payment system. The cloud providers we will use are IBM Cloud and AWS. So, you must create an account for each cloud provider.
+This step-by-step guide will allows you to create a simple web application applying the *kubedeb* standard.
 
-<b>NB</b>: all the used tools are free (they have a lite plan that we will use for this demo); anyway, for the AWS (optional) component, you must add your credit card in order to complete the AWS account confirmation.
+<b>NB</b>: all the used tools are free (they have a lite plan that we will use for this demo)
 
 ### Step 1 - IBM Cloud account creation
 Create an IBM Cloud account: follow the guide at <a href='https://cloud.ibm.com/registration'>this</a> url to complete the registration
@@ -88,32 +88,16 @@ Provisioning of the IBM Services we will use in the rest of the guide; in partic
 
 <ol>
 <li> Kubernetes cluster: click <a href='https://cloud.ibm.com/kubernetes/catalog/cluster'>here</a>, click <i>create</i> and select the free plan (1 worker node - 2 vCPUs 4GB RAM)
-<li> Db2: click <a href='https://cloud.ibm.com/catalog/services/db2'>here</a> and follow the instructions to create a Db2 instance with the lite plan (200 MB of data storage, 5 simultaneous connections, shared multitenant system)
 <li> Continuous Delivery Service: click <a href='https://cloud.ibm.com/catalog/services/continuous-delivery'>here</a> and follow the instructions to instantiate a Continuous Delivery service with lite plan
 </ol>
 
-### Step 3 - DB creation
-In this step we will create a simple DB schema that will allows our backend application to write data (payment transactions) to Db2.
-
-<ol>
-<li> From your IBM Cloud console, open the Db2 service
-<li> From the left menu, click "Service Credentials"
-<li> Create new credenitals by clicking to the "New Credentials" button
-<li> Use your favorite jdbc client to connect to your Db2 instance using the credentials you generated (Host, Port, Database, Username and password)
-</ol>
-
-Clone this repository in your favorite folder. Using your favourite jdbc client, run the queries in the <i>src/db2/ 	db_Cloud4Banking.sql</i>. 
-The following ER diagram shows the simple tables you will have in your database.
-
-![ER diagram](img/er_diagram.png)
-
-### Step 4 - Toolchain setup
+### Step 3 - Toolchain setup
 In this step you will setup the toolchain that will allows you to deploy the solution to Kubernetes in IBM cloud.
 
 #### Registry configuration
 <ol>
 <li> From your IBM Cloud console, open the left menu and click <i>Kubernetes</i>
-<li> Open the <i>Registry</i> submenu and follow the instruction to create a new namespace with the name <i>cloud4bnakinc</i>
+<li> Open the <i>Registry</i> submenu and follow the instruction to create a new namespace with the name <i>kubedev</i>
 </ol>
 
 #### Integration tools
@@ -121,16 +105,16 @@ In this step you will setup the toolchain that will allows you to deploy the sol
 <li> From your IBM Cloud console, open the Continuous Delivery Service you created in Step 2
 <li> In the <i>Getting Started</i> section, click <i>Create a toolchain</i>
 <li> From the menu, click <i>Build your own toolchain</i>
-<li> In the <i>Toolchain name</i> type <i>cloud4banking</i>
+<li> In the <i>Toolchain name</i> type <i>kubedev</i>
 <li> Click <i>Create</i>
 <li> Click <i>Add a tool</i>
 <li> Click <i>GitHub Enterprise Whitewater</i>
 <li> In the <i>Repository type</i>, select <i>Existing</i>
-<li> In the <i>Repository URL</i>, type <i>https://github.ibm.com/Simone-Romano1/Cloud4Banking</i>
+<li> In the <i>Repository URL</i>, type <i>https://github.com/sromano1992/kubedev/i>
 <li> Click <i>Create integration</i>
 <li> Click <i>Add a tool</i>
 <li> Click <i>Delivery Pipeline</i>
-<li> In the <i>Pipeline name</i> type <i>cloud4banking</i>
+<li> In the <i>Pipeline name</i> type <i>kubedev</i>
 </ol>
 
 The following image shows the configured integration tools:
