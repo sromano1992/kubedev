@@ -48,13 +48,13 @@ The previous image <i>kubedev </i> continuous delivery pipeline from the reposit
 
 The <i>kubedev</i> toolchain, in this scenario, has two different stage: build and deploy. <br>
 <ol>
-<li>The <b>build</b> stage is responsible for: 
-<ol>
-<li> build each application docker to IBM Cloud Container Registry
-<li> generate and push a new deployment file with the new built docker images
-<li> create a new git tag to have a *label* for this specific deploy (useful for rollback scenario). 
-</ol>
-</li>The <b>deploy</b> stage get in input the *deployment.yaml* file and publish it to Kubernetes runtime; here the new version of your application is deployed. 
+    <li>The <b>build</b> stage is responsible for: 
+    <ol>
+        <li> build each application docker to IBM Cloud Container Registry
+        <li> generate and push a new deployment file with the new built docker images
+        <li> create a new git tag to have a *label* for this specific deploy (useful for rollback scenario). 
+    </ol>
+    <li>The <b>deploy</b> stage get in input the *deployment.yaml* file and publish it to Kubernetes runtime; here the new version of your application is deployed. </li>
 </ol>
 
 In the next scenario we have just one git branch and one Kubernetes cluster, but the concepts are the same. 
