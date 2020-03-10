@@ -130,7 +130,12 @@ The following image shows the configured integration tools:
 <li> From the stage menu, switch to <i>Jobs</i> section
 <li> As <i>Builder type</i>, select <i>Container Registry</i>
 <li> Enter an API Key (use <a href='https://cloud.ibm.com/docs/iam?topic=iam-serviceidapikeys#create_service_key'>this</a> guide to generate an API Key)
-<li> In the <i>Build script</i>, paste the content of the <i>src/toolchain/build.txt</i> script
+<li> As <i>Container Registry namespace</i> choose <i>kubedev</i>
+<li> In the <i>Build script</i>, paste the following content:
+```
+#!/bin/bash
+sh toolchain/build.sh
+```
 <li> Click <i>Save</i>
 </ol>
 
