@@ -118,7 +118,7 @@ In this step you will setup the toolchain that will allows you to deploy the sol
 </ol>
 
 The following image shows the configured integration tools:
-![integration Tools](img/integrationTools.png)
+![integration Tools](doc/kubedev_integrationTools.png)
 
 #### Toolchain stages configuration
 ##### Build stage
