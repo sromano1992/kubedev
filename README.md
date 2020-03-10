@@ -40,9 +40,13 @@ Note that, in the *deployment.yaml*, you must tag each of your docker image with
 
 ![GitHub repository organization](doc/buildnumber.png)
 
-The *toolchain* folder contains the script that will do the continuous delivery tasks for you (see next sections for more details). Finally, the *rollback* folder will automatically be populated with a new *deployment.yaml* file after each deploy you will do; you can revert your applications to a previous version by applying (*kubectl apply -f ...*) to your cluster a specific version of your application.
+The *toolchain* folder contains the script that will do the continuous delivery tasks for you (see next sections for more details). Finally, the *rollback* folder will automatically be populated with a new *deployment.yaml* file after each deploy you will do.
 
 ![GitHub repository organization](doc/deployment.png)
+
+ You can revert your applications to a previous version by applying (*kubectl apply -f ...*) to your cluster a specific version of your application.
+
+ ![GitHub repository organization](doc/kubedev_rollback.png)
 
 ## Continuous delivery pipeline
 
