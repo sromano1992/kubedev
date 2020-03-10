@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: de.icr.io/kubedev/backend:BUILD_NUMBER
+        image: uk.icr.io/kubedev/backend:BUILD_NUMBER
         imagePullPolicy: Always    
         ports:
         - containerPort: 5003
@@ -45,7 +45,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: de.icr.io/kubedev/frontend:BUILD_NUMBER
+        image: uk.icr.io/kubedev/frontend:BUILD_NUMBER
         imagePullPolicy: Always    
         ports:
         - containerPort: 3000
