@@ -1,5 +1,9 @@
 # kubedev: a continuous delivery Standard for your K8s workloads
 
+<p align="center">
+  <img width="460" height="300" src="doc/kubedev_logo.png">
+</p>
+
 *kubedev* is a standard that allows you to easily deploy your applications to Kubernetes with a continuous delivery approach. The benefits you have using this approach are listed below:
 
 1) **automatic versioning of each components of your application**: for example, if you are designing and devolping a microservices application for Kubernetes, you can use this approach to simply deploy and versioning each component of your application without the need to be a devops specialist
