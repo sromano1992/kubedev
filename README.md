@@ -129,7 +129,7 @@ In this step you will setup the toolchain that will allows you to deploy the sol
 <li> Click <i>Add a tool</i>
 <li> Click <i>GitHub Enterprise Whitewater</i>
 <li> In the <i>Repository type</i>, select <i>Existing</i>
-<li> In the <i>Repository URL</i>, type <i>https://github.com/sromano1992/kubedev/i>
+<li> In the <i>Repository URL</i>, type <i>https://github.com/sromano1992/kubedev</i>
 <li> Click <i>Create integration</i>
 <li> Click <i>Add a tool</i>
 <li> Click <i>Delivery Pipeline</i>
