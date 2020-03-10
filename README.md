@@ -6,21 +6,21 @@
 
 2) **the developers team does not need to be a Kubernetes specialist to deploy the applications to Kubernetes**: your developers team must just write code and click a button to do versioning, deploy, add a new microservice
 
-The used components are: 
-
-1) GitHub: the code and artifacts are pushed to GitHub 
-
-2) IBM Container Registry: the built docker images are pushed to IBM Cloud Container Registry 
-
-3) Toolchain: Toolchains service allows you to deploy a new version of your microservices application to Kubernetes 
-
-<b>N.B.: the <i>kubedev</i> concepts can be extended to also other Cloud providers or to your on-premises Kubernetes infrastructure.</b>
+The *kubedev* concepts are valid everywhere you have a K8s cluster: both Cloud providers or to your on-premises Kubernetes infrastructure can take advantages from this standard.</b>
 
 ## How is the lecture organized
 This lecture is organized as follow:
 
 1) **kubedev concepts**: the first section gives you the theory basis you need to understand how the *kubedev* standard works and how to build your custom Kubernetes application using this standard
 2) **Build your first *kubedev* microservices application**: here a simple scenario of *kubedeb* application is shown; you can follow the steps in this section to build your first *kubedev* application
+
+The used components for the point 2 are: 
+
+1) GitHub: the code and artifacts are pushed to GitHub 
+
+2) IBM Container Registry: the built docker images are pushed to IBM Cloud Container Registry 
+
+3) Toolchain: Toolchains service allows you to deploy a new version of your microservices application to Kubernetes 
 
 # kubedev concepts
 
